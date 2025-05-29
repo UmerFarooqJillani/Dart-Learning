@@ -1,6 +1,6 @@
 # <p align="center">Dart Learning Repository</p>
 
-<p align="center">Welcome to the **Dart Learning** repository!</p>
+<p align="center"> Welcome to the Dart Learning repository! </p>
 
 This repo is dedicated to learning and practicing the **Dart programming language**, the foundation of Flutter and a powerful tool for building modern, fast, cross-platform apps.
 
