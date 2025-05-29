@@ -14,19 +14,15 @@ It is primarily used to build apps for **mobile**, **web**, **desktop**, and **b
 ## ✨ Features
 
 ### Cross-Platform
-Used for building apps for **Android**, **iOS**, **Web**, **Windows**, **Mac**, and **Linux**.
-
+- Used for building apps for **Android**, **iOS**, **Web**, **Windows**, **Mac**, and **Linux**.
 ### Fast & Optimized
-Compiles to **native machine code** and **JavaScript** for high performance.
-
+- Compiles to **native machine code** and **JavaScript** for high performance.
 ### Object-Oriented
-Everything is an object (like C++ or Java). Supports **classes**, **inheritance**, and **interfaces**.
-
+- Everything is an object (like C++ or Java). Supports **classes**, **inheritance**, and **interfaces**.
 ### Hot Reload
-In Flutter, Dart supports **instant UI reloads**, allowing rapid development.
-
+- In Flutter, Dart supports **instant UI reloads**, allowing rapid development.
 ### Package Manager
-Dart uses [**pub.dev**](https://pub.dev) for community-built, reusable packages (like npm or pip).
+- Dart uses [**pub.dev**](https://pub.dev) for community-built, reusable packages (like npm or pip).
 
 
 ## 📚 Why Learn Dart?
