@@ -1,6 +1,7 @@
 # <p align="center">Dart Learning Repository</p>
 
 <p align="center">Welcome to the **Dart Learning** repository!</p>
+
 This repo is dedicated to learning and practicing the **Dart programming language**, the foundation of Flutter and a powerful tool for building modern, fast, cross-platform apps.
 
 
@@ -35,7 +36,6 @@ Dart uses [**pub.dev**](https://pub.dev) for community-built, reusable packages 
 - 💡 Easy to learn if you already know **C++, Java, or JavaScript**.
 - 🔧 Great for both **frontend and backend** development.
 
----
 
 ## 🧪 Dart Code Example
 
@@ -46,5 +46,6 @@ void main() {
 
 #### **Author**
 [**Umer Farooq Jillani**](https://github.com/UmerFarooqJillani/Dart-Learning)
+
 
 --- 
