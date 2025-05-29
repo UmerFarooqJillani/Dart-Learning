@@ -1,0 +1,19 @@
+How Dart Runs:
+    Dart can run in two main ways:
+        1- Ahead-of-Time (AOT) Compilation → For fast native mobile/desktop apps
+            AOT means the Dart code is compiled to native machine code before the app is run.
+            Where is AOT Used?
+                - In production builds
+                - When you create a release app for Android, iOS, Windows, etc.
+        2- Just-in-Time (JIT) Compilation → Used in development for hot reload
+            JIT stands for Just-in-Time compilation. Dart code is compiled at runtime, 
+            while the app is running.
+            Where is JIT Used?
+                - During development
+                - When you're using Flutter hot reload or hot restart
+    In this repo:
+        Your Dart programs run in JIT mode (standard run) and later understand AOT conceptually
+        for future use (When You Shift to Flutter).
+
+
+
