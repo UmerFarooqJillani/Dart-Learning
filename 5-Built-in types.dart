@@ -14,6 +14,14 @@ void main(){
     null      --> (Null)
   */
 //----------------------------------------------------------------------------
+  // Numbers   --> (int, double(float))
+  // num n1 = 1_000_000;
+  // var n2 = 0.000_000_000_01;
+  // var n3 = 0x00_14_22_01_23_45; // MAC address
+  // var n4 = 555_123_4567; // US Phone number
+  var n5 = 100__000_000__000_000; // one hundred million million!
+  print(n5);
+//----------------------------------------------------------------------------
   // Records --> ((value1, value2))
   // Tuple-like structure to hold multiple values.
     var user = ('Alice', 25); // A record with a String and an int
