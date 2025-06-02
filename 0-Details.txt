@@ -15,6 +15,39 @@ How Dart Runs:
         Your Dart programs run in JIT mode (standard run) and later understand AOT conceptually
         for future use (When You Shift to Flutter).
 --------------------------------------------------------------------------------------------
+Function Related Questions:
+---------------------------
+What are the different ways to define functions in Dart?
+    --> Standard Named Function (required parameter function if declare)
+    --> Arrow Function (Shorthand)
+    --> Anonymous Function (Lambda)
+    --> Function Expression Stored in a Variable
+        e.g:
+            Function greet = () => print("Hello");
+--------
+What is the difference between named and positional parameters?
+    --> Positional Parameters:
+        - Use square brackets [].
+        - Order matters.
+        - Arguments name optional.
+        e.g:
+            void greet(String name, [String title = 'Mr.']) {
+                print('Hello $title $name');
+            }
+            greet('Ali'); // Hello Mr. Ali
+    --> Named Parameters:
+        - Use curly braces {}.
+        - Can be passed in any order.
+        - Can be optional (with default) or required (with required).
+        e.g:
+            void greet({required String name, String title = 'Mr.'}) {
+                print('Hello $title $name');
+            }
+            greet(name: 'Ali'); // Hello Mr. Ali
+--------
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
 
 
 
