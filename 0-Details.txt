@@ -45,8 +45,49 @@ What is the difference between named and positional parameters?
             }
             greet(name: 'Ali'); // Hello Mr. Ali
 --------
+What is a closure in Dart?
+    A closure is a function that captures variables from its surrounding lexical scope, even 
+    after the outer function has finished executing.
+    example:
+        Function makeAdder(int x) {
+            return (int y) => x + y; // x is captured
+        }
+        var add2 = makeAdder(2);
+        print(add2(3)); // 5
 
+    - x remains in memory because it’s used inside the returned function.
+--------
+How does Dart treat functions as first-class objects?
+    In Dart:
+        Functions can be assigned to variables.
+        Functions can be passed as arguments.
+        Functions can be returned from other functions.
+--------
+What are function tear-offs and when would you use them?
+    A function tear-off is a way to refer to a function by name without calling it.
+    Use Case:
+        You want to pass a function as a reference, not call it.
+--------
+What is the difference between sync* and async* generators?
+    Both return a sequence of values over time using yield.
+        | Feature  | `sync*`                | `async*`                            |
+        | -------- | ---------------------- | ----------------------------------- |
+        | Returns  | `Iterable<T>`          | `Stream<T>`                         |
+        | Use case | Synchronous iteration  | Asynchronous (with delays, futures) |
+        | Usage    | `for (var x in foo())` | `await for (var x in foo())`        |
+        - sync* example:
+            Iterable<int> getNumbers() sync* {
+                yield 1;
+                yield 2;
+            }
+        - async* example:
+            Stream<int> getNumbers() async* {
+                await Future.delayed(Duration(seconds: 1));
+                yield 1;
+                yield 2;
+            }
 --------------------------------------------------------------------------------------------
+
 --------------------------------------------------------------------------------------------
 
 
