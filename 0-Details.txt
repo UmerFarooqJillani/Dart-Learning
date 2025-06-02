@@ -87,11 +87,14 @@ What is the difference between sync* and async* generators?
                 yield 2;
             }
 --------------------------------------------------------------------------------------------
-
+Interfaces Related Questions:
+----------------------------
+--> Why Would You Use implements Over extends?
+  Reason:
+    You use implements when:
+      - You want to use only the structure of a class (its method signatures) and 
+        not inherit behavior.
+      - You want to implement multiple interfaces, which extends does not allow.
+      - You want complete control over the implementation.
 --------------------------------------------------------------------------------------------
-
-
-
-
-
 
