@@ -51,6 +51,7 @@ Dart Access Modifiers:
 void main(){
   /* 
   --> Instance Vs Object ??
+      Every object is an instance of a class.
       Object?
         - An object is a concrete entity created from a class.
         - It represents data + behavior (i.e., fields + methods).
