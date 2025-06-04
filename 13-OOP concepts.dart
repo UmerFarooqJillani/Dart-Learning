@@ -2,7 +2,7 @@ import 'dart:math'; // Required for sqrt() - Uses the sqrt() function from the d
 
 //------------- Using Class Members ----------------------------------------
 class Point {
-  double x, y;
+  double x, y;    // instance/object variable
 
   Point(this.x, this.y);
   double distanceTo(Point other) {
@@ -58,7 +58,7 @@ class Child extends Parent {
 
 // ------------- Static Members ----------------------------------------
 class MathUtils {
-  static const pi = 3.14; //Shared data
+  static const pi = 3.14; //Shared data  or also know as 'class variables'
 
   static int square(int n) => n * n;
 }

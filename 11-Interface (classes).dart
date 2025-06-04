@@ -14,7 +14,7 @@
                   - Override Methods Only if needed
                   - only single Inheritance
 
-      implements: - Use a class as an interface
+      implements: - Use a class as an 'interface'
                   - No Inherits Code 
                   - Must Override all Methods
                   - Multiple Inheritance
