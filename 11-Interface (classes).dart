@@ -74,10 +74,20 @@
 mixin CanRun {
   void run() => print("Running fast!");
 }
-mixin CanSwim {
+mixin class CanSwim {
   void swim() => print("Swimming smoothly!");
 }
 class Dolphin with CanSwim, CanRun {}
+
+// mixin class Musician {
+//   // ...
+// }
+// class Novice with Musician { // Use Musician as a mixin
+//   // ...
+// }
+// class Novice extends Musician { // Use Musician as a class
+//   // ...
+// }
 void main() {
   Dolphin d = Dolphin();
   d.run();

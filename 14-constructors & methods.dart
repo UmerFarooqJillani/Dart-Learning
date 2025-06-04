@@ -47,6 +47,36 @@ class Vector3D extends Vector2D {
   Vector3D(super.x, super.y, this.z);
 }
 // -----------------------------------------------
+//  tear-offs constructor
+class Person2 {
+  final String name;
+
+  Person2(this.name); // Unnamed constructor
+  Person2.guest() : name = 'Guest'; // Named constructor
+
+  @override
+  String toString() => 'Person2: $name';
+}
+
+//----------- Methods ----------------------------------
+/* 
+What Are Getters and Setters?
+  - Getters: Used to read (get) the value of a property.
+  - Setters: Used to write (set) or update the value of a property.
+*/
+class Rectangle {
+  double left, top, width, height;
+  Rectangle(this.left, this.top, this.width, this.height);
+
+  // Getter: computed property for 'right'
+  double get right => left + width;
+  // Setter: adjusts 'left' so that 'right' becomes the value passed
+  set right(double value) => left = value - width;
+  // Getter: computed property for 'bottom'
+  double get bottom => top + height;
+  // Setter: adjusts 'top' so that 'bottom' becomes the value passed
+  set bottom(double value) => top = value - height;
+}
 
 
 void main(){
@@ -72,4 +102,18 @@ void main(){
   print(obj2.y);
   print(obj2.z);
 
+  //  tear-offs constructor
+  var names = ['Ali', 'Sara', 'Omar'];      // List of names
+  // Use tear-off of the unnamed constructor
+  var people = names.map(Person2.new).toList();
+  for (var person in people) {
+    print(person); // Output: Person: Ali, Person: Sara, etc.
+  }
+
+//----------- Methods ----------------------------------
+  var rect = Rectangle(3, 4, 20, 15);
+  print(rect.left);   // Output: 3
+  print(rect.right);  // Output: 3 + 20 = 23
+  rect.right = 12;     // Now sets: left = 12 - 20 = -8
+  print(rect.left);    // Output: -8
 }
