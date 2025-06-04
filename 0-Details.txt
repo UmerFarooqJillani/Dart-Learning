@@ -115,13 +115,13 @@ OOP Concepts related Questions:
             print(identical(a, b)); // true (same object)
             print(identical(a, c)); // false (different object)
 
---------------------
+----------
 Canonicalization means?
     - "Creating a single, shared instance for all objects with the same value."
     - So, when Dart canonicalizes an object, it ensures that identical values use 
       the same memory location, instead of creating duplicates
 
----------------------
+----------
 What is the purpose of the 'late' keyword, and when would you use it in instance variable declarations?
     The late keyword tells Dart:
         “I promise this variable will be initialized before it’s used, but not at declaration time.”
@@ -130,27 +130,25 @@ What is the purpose of the 'late' keyword, and when would you use it in instance
         - When you want lazy initialization.
         - Avoids making the variable nullable or using a default.
 
----------------------
+--------
 What happens in memory when you create an instance of a class?
     - Memory is allocated for the object.
     - All instance fields are initialized.
     - The constructor is called to set up the initial state.
     - A reference to the object is returned and can be assigned to a variable.
 
----------------------
+-----
 How do you check if a variable is an instance of a class in Dart?
     Use the is keyword:
         if (a is Animal) {
             print('a is an instance of Animal');
         }
 
--------------------
+-------
 What’s the relation between class, constructor, and instance?
     - A class is a blueprint.
     - A constructor is a special method used to initialize an object.
     - An instance (object) is a concrete realization of a class created using the constructor.
-
-
 
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
