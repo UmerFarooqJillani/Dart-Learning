@@ -1,0 +1,16 @@
+--> Factory Constructor
+--> Wrapper Classes vs Extension Type 
+(Learn with flutter widgets)
+--> How do you handle async operations in Dart?
+--> Difference between Future and Stream.
+-------------------- Interview Questions --------------------
+1- What is the purpose of extension types in Dart?
+2- How do extension types differ from wrapper classes?
+3- What is the role of the representation type in extension types?
+4- Explain the use of implements in extension types.
+5- What is the difference between transparent and non-transparent extension types?
+6- How do extension types behave at runtime?
+7- When should you use the @redeclare annotation?
+8- Can you cast between an extension type and its representation type?
+9- What are the benefits and risks of using extension types?
+X- How do extension types help in JS interop scenarios?

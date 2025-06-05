@@ -151,6 +151,9 @@ What’s the relation between class, constructor, and instance?
     - An instance (object) is a concrete realization of a class created using the constructor.
 
 --------------------------------------------------------------------------------------------
+Extension Method Related Questions:
+----------------------------------
+--> Missing (see the 'Later Learn in dart'.txt)
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 
