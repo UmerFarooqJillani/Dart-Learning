@@ -16,8 +16,8 @@ Arrow Syntax:
 Type of parameter in Dart:
   1. Required
   2. Optional
-    - Named []
-    - Positional[]
+    - Named {}
+    - Positional []
 -------------------------------------------------------------
 */
 //----------------------------
