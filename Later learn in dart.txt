@@ -3,6 +3,15 @@
 (Learn with flutter widgets)
 --> How do you handle async operations in Dart?
 --> Difference between Future and Stream.
+--> Async programming (Future, Stream, async/await)
+--> Widget functions as first-class citizens
+--> Lambdas and Function typedefs
+--> State management patterns
+--> Custom UI and animations
+--> Future & Stream deeply
+--> Error handling (try/catch, custom exceptions)
+--> typedef for custom function types
+--> Zone, isolates (for concurrency)
 -------------------- Interview Questions --------------------
 1- What is the purpose of extension types in Dart?
 2- How do extension types differ from wrapper classes?
