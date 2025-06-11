@@ -37,6 +37,8 @@ bool isEven(int number) => number % 2 == 0;
 // Optional Parameters
 //---------------------------------------------------------------
 // Named Parameters {}
+// void greet({required String name}) {
+//        or
 void greet({String name = 'Guest'}) {
   print('Hello, $name!');
 }
