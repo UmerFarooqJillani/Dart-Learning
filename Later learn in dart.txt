@@ -12,7 +12,7 @@
 --> Error handling (try/catch, custom exceptions)
 --> typedef for custom function types
 --> Zone, isolates (for concurrency)
--------------------- Interview Questions --------------------
+-------------------- Interview Questions (extension types) --------------------
 1- What is the purpose of extension types in Dart?
 2- How do extension types differ from wrapper classes?
 3- What is the role of the representation type in extension types?
