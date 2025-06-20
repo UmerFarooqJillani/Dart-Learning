@@ -1,4 +1,7 @@
 /* 
+--> What Are Wrapper Classes?
+    A wrapper class is a regular Dart class that holds a value of another type.
+
 --> What Is an Extension Method?        (Introduced in Dart 2.7)
     An extension method allows you to add new functionality to existing classes 
     without modifying them or creating a subclass.
@@ -45,7 +48,18 @@ extension DateHelpers on DateTime {
 //             import 'string_apis.dart';
 //             import 'string_apis_3.dart' as utils;
 //             print(utils.NumberParsing('42').parseInt());
+/*
+  --> Real world example of Wrapper Class and Extension Type
+      Wrapper Class:
+      	          Like putting a phone inside a custom case — it’s still the phone, 
+                  but it's wrapped with new features and identity.
+      Extension Type:
+                	Like adding a screen protector — you enhance the phone's function without 
+                  changing its shape, size, or identity.
+*/
+/*
 
+*/
 
 
 
@@ -53,7 +67,7 @@ extension DateHelpers on DateTime {
 void main(){
     print("Alice".greet()); // Output: Hello, Alice!
 
-    // Adding Multiple Methods
+    // Adding Multiple Methods 
     print(5.squared()); // 25
     print((-3).isPositive()); // false
 
