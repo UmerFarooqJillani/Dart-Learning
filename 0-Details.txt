@@ -149,11 +149,7 @@ What’s the relation between class, constructor, and instance?
     - A class is a blueprint.
     - A constructor is a special method used to initialize an object.
     - An instance (object) is a concrete realization of a class created using the constructor.
-
---------------------------------------------------------------------------------------------
-Extension Method Related Questions:
-----------------------------------
---> Missing (see the 'Later Learn in dart'.txt)
+    
 --------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------
 
