@@ -48,6 +48,7 @@ void greet({String name = 'Guest'}) {
 String gr(String name, [String title = 'Mr.']) {
   return 'Hello, $title $name';
 }
+
 //-----------------------------------------------------------------
 bool topLevel = true;
 
@@ -92,17 +93,18 @@ void main() async {
   print_value(value) {
     print("The value of List is: $value");
   }
+
   //List
   var values = [1, 2, 3, 4, 5];
   values.forEach(print_value); //Fun as a Parameter
   //----------------------------------------------------------------
   // .map() function
-  // The .map() function in Dart transforms each element of a 
+  // The .map() function in Dart transforms each element of a
   // collection (usually a List or Set) into a new element, using a function you provide.
   var numbers = [1, 2, 3];
   var squares = numbers.map((n) => n * n);
-  print(squares);           // (1, 4, 9)
-  print(squares.toList());  // [1, 4, 9]
+  print(squares); // (1, 4, 9)
+  print(squares.toList()); // [1, 4, 9]
   // ------------------
   var names = ['Ali', 'Sara'];
   var greetings = names.map((name) => 'Hello $name');
@@ -113,16 +115,16 @@ void main() async {
   // -------------------------------------------------------------------
   // A representation of the runtime type of the object.
   String str = " Umer Farooq Jillani ";
-  print(str.runtimeType);       // output: String
-// -------------------------------------------------------------------
+  print(str.runtimeType); // output: String
+  // -------------------------------------------------------------------
   // Lexical Scope and Lexical closures in dart
-// -------------------------------------------------------------------
+  // -------------------------------------------------------------------
   // Lexical Scope
-  // - Lexical scope means that the scope (or visibility) of variables is determined 
+  // - Lexical scope means that the scope (or visibility) of variables is determined
   //   by the physical structure of the code—i.e., by where the variables are declared
   //   using {} (curly braces).
   // - Inner functions have access to all variables in their outer lexical scope.
-  // - Dart’s lexical scope allows inner functions to access outer-scope variables all 
+  // - Dart’s lexical scope allows inner functions to access outer-scope variables all
   //   the way up the call tree.
   var insideMain = true;
   void myFunction() {
@@ -130,35 +132,37 @@ void main() async {
     void nestedFunction() {
       var insideNestedFunction = true;
       // All of these are in scope:
-      assert(topLevel);   //declare in Line # 50   // ✅ Accessible (global)  
-      assert(insideMain);   // ✅ Accessible (from main)
-      assert(insideFunction);  // ✅ Accessible (from myFunction)
-      assert(insideNestedFunction);    // ✅ Accessible (local)
+      assert(topLevel); //declare in Line # 50   // ✅ Accessible (global)
+      assert(insideMain); // ✅ Accessible (from main)
+      assert(insideFunction); // ✅ Accessible (from myFunction)
+      assert(insideNestedFunction); // ✅ Accessible (local)
     }
   }
   //-----------------------------------
   // Lexical Closures
-  // - A closure is a function that captures variables from its surrounding 
+  // - A closure is a function that captures variables from its surrounding
   // scope — even after the outer function has finished executing.
-  // - A closure is a function that remembers the variables from the scope 
+  // - A closure is a function that remembers the variables from the scope
   // where it was created, even if it's executed in a different scope later.
 
-  var add2 = makeAdder(2); // closure remembers addBy = 2 // makeAdder() fnc declare in line # 52
+  var add2 = makeAdder(
+    2,
+  ); // closure remembers addBy = 2 // makeAdder() fnc declare in line # 52
   // "add2" now stores that function "(int i) => 2 + i"
   // The variable addBy is captured in a closure, so it remains remembered.
 
   var add4 = makeAdder(4); // closure remembers addBy = 4
-  assert(add2(3) == 5);  // 2 + 3
-  assert(add4(3) == 7);  // 4 + 3 
-// -----------------------------------
-// |Concept |Lexical Scope                           |Lexical Closure                                       |
-// |--------|----------------------------------------|------------------------------------------------------|
-// |Meaning |Variable visibility based on code layout|Function captures variables from its surrounding scope|
-// |Access  |Inner can access outer scope            |Function remembers outer scope variables              |
-// |Example |Nested functions                        |Returning function that uses a scoped variable        |
-// |--------------------------------------------------------------------------------------------------------|
+  assert(add2(3) == 5); // 2 + 3
+  assert(add4(3) == 7); // 4 + 3
+  // -----------------------------------
+  // |Concept |Lexical Scope                           |Lexical Closure                                       |
+  // |--------|----------------------------------------|------------------------------------------------------|
+  // |Meaning |Variable visibility based on code layout|Function captures variables from its surrounding scope|
+  // |Access  |Inner can access outer scope            |Function remembers outer scope variables              |
+  // |Example |Nested functions                        |Returning function that uses a scoped variable        |
+  // |--------------------------------------------------------------------------------------------------------|
 
-//-----------------------------------------------------------------
+  //-----------------------------------------------------------------
   // Tear-offs
   /*
   In Dart, when you refer to a function, method, or constructor without calling it 
@@ -168,7 +172,7 @@ void main() async {
   var charCodes = [68, 97, 114, 116];
   var buffer = StringBuffer();
   // StringBuffer is a class used to efficiently build or concatenate strings.
-  // Instead of using + repeatedly to join strings (which creates new string objects every time), 
+  // Instead of using + repeatedly to join strings (which creates new string objects every time),
   // StringBuffer creates only one growing buffer internally.
   // It's faster and memory-efficient for building large strings.
 
@@ -196,39 +200,40 @@ void main() async {
   charCodes.forEach((code) {
     buffer.write(code);
   });
-//-----------------------------------------------------
+  //-----------------------------------------------------
   // Generators
-    // A generator is a special kind of function that lazily produces values, 
-    // one at a time, only when needed.
-    // Think of it like a vending machine — you push a button (iterate), and it 
-    // gives you one item (value) at a time.
+  // A generator is a special kind of function that lazily produces values,
+  // one at a time, only when needed.
+  // Think of it like a vending machine — you push a button (iterate), and it
+  // gives you one item (value) at a time.
   // Why Use Generators?
-    // To optimize memory: instead of storing large lists in memory, you generate values on the fly.
-    // To handle infinite or large sequences.
-    // To enable lazy evaluation.
-    // Types
-      //   | Type             | Returns    | Marked With | Use Case                    |
-      //   | ---------------- | ---------- | ----------- | --------------------------- |
-      //   | Synchronous      | Iterable   | sync*       | For regular iteration       |
-      //   | Asynchronous     | Stream     | async*      | For async or time-based ops |
-      //   |---------------------------------------------------------------------------|
-    // Synchronous vs Asynchronous Operations (Comparison)
-      // | Feature     | Synchronous                | Asynchronous                           |
-      // | ----------- | -------------------------- | -------------------------------------- |
-      // | Return Type | `Iterable<T>`              | `Stream<T>`                            |
-      // | Keyword     | `sync*`                    | `async*`                               |
-      // | When Used   | Immediate value generation | Delayed/time-based/event-driven values |
-      // | Execution   | Blocking                   | Non-blocking (can pause/resume)        |
-      // | Access      | `for-in` loop              | `await for` loop                       |
-      // | Memory      | Lightweight, fast          | Good for IO, UI, or async data streams |
-      // |-----------------------------------------------------------------------------------|
+  // To optimize memory: instead of storing large lists in memory, you generate values on the fly.
+  // To handle infinite or large sequences.
+  // To enable lazy evaluation.
+  // Types
+  //   | Type             | Returns    | Marked With | Use Case                    |
+  //   | ---------------- | ---------- | ----------- | --------------------------- |
+  //   | Synchronous      | Iterable   | sync*       | For regular iteration       |
+  //   | Asynchronous     | Stream     | async*      | For async or time-based ops |
+  //   |---------------------------------------------------------------------------|
+  // Synchronous vs Asynchronous Operations (Comparison)
+  // | Feature     | Synchronous                | Asynchronous                           |
+  // | ----------- | -------------------------- | -------------------------------------- |
+  // | Return Type | `Iterable<T>`              | `Stream<T>`                            |
+  // | Keyword     | `sync*`                    | `async*`                               |
+  // | When Used   | Immediate value generation | Delayed/time-based/event-driven values |
+  // | Execution   | Blocking                   | Non-blocking (can pause/resume)        |
+  // | Access      | `for-in` loop              | `await for` loop                       |
+  // | Memory      | Lightweight, fast          | Good for IO, UI, or async data streams |
+  // |-----------------------------------------------------------------------------------|
 
-//-----------------------------------------------------
+  //-----------------------------------------------------
   //  Synchronous Generator – sync*
   Iterable<int> naturalsTo(int n) sync* {
     int k = 0;
     while (k < n) yield k++;
   }
+
   //   sync* marks it as a sync generator.
   // yield emits a value one by one.
   // Iterable<int> is returned — you can use for-in to loop.
@@ -241,6 +246,7 @@ void main() async {
     int k = 0;
     while (k < n) yield k++;
   }
+
   // async* marks it as an async generator.
   // yield emits values asynchronously.
   // Stream<int> is returned — use await for.
@@ -257,6 +263,53 @@ void main() async {
       yield* naturalsDownFrom(n - 1); // recursion
     }
   }
+
   //-------------------------
-  
+  /*
+    --> Real World Example: 
+       Future ---> 	Ordering a pizza: you get it once after a delay
+       Stream ---> 	Watching a YouTube Live: you receive data over time continuously
+    --> Future in Depth
+        - A Future represents a Single value (or error) that will be available in the future, 
+        after some async operation completes.
+        - Common Scenarios for Future:
+          - Fetching data from internet (HTTP)
+          - Reading file contents
+          - Waiting for user login/permissions
+        - Use Future when dealing with tasks that end, like an API request.
+
+
+    --> Stream in Depth
+        - A Stream provides a sequence of asynchronous data (Multiple values over time) events,
+        like data coming in chunks over time.
+        - Common Scenarios for Stream:
+          - Listening to sensor data
+          - Button clicks or gestures
+          - Real-time chat messages
+          - WebSocket or Firebase data
+        - Use Stream when handling continuous or repeated data, like live feeds or button taps.
+    */
+
+  // Future
+  Future<String> readFile() async {
+    await Future.delayed(Duration(seconds: 2)); // simulating delay
+    return "File content: Dart is awesome!";
+  }
+
+  print("Reading file...");
+  String content = await readFile();
+  print(content);
+
+  // Stream
+  Stream<int> sensorStream() async* {
+    for (int i = 0; i < 5; i++) {
+      await Future.delayed(Duration(seconds: 1));
+      yield i * 10; // Simulating sensor reading
+    }
+  }
+
+  print("Starting sensor stream...");
+  await for (var reading in sensorStream()) {
+    print("Sensor reading: $reading");
+  }
 }
