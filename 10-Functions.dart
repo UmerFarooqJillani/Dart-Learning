@@ -277,8 +277,6 @@ void main() async {
           - Reading file contents
           - Waiting for user login/permissions
         - Use Future when dealing with tasks that end, like an API request.
-
-
     --> Stream in Depth
         - A Stream provides a sequence of asynchronous data (Multiple values over time) events,
         like data coming in chunks over time.
