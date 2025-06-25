@@ -217,6 +217,10 @@ void main() async {
   //   | Asynchronous     | Stream     | async*      | For async or time-based ops |
   //   |---------------------------------------------------------------------------|
   // Synchronous vs Asynchronous Operations (Comparison)
+  // --> Synchronous programming:
+  //     In synchronous programming, tasks are executed one after another, with each task waiting for the previous one to complete before starting.
+  // --> Asynchronous programming
+  //      Asynchronous programming allows a program to initiate a potentially long-running task and continue executing other tasks without waiting for the first to complete.
   // | Feature     | Synchronous                | Asynchronous                           |
   // | ----------- | -------------------------- | -------------------------------------- |
   // | Return Type | `Iterable<T>`              | `Stream<T>`                            |
