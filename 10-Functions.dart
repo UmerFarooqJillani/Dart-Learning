@@ -141,9 +141,8 @@ void main() async {
   //-----------------------------------
   // Lexical Closures
   // - A closure is a function that captures variables from its surrounding
-  // scope — even after the outer function has finished executing.
-  // - A closure is a function that remembers the variables from the scope
-  // where it was created, even if it's executed in a different scope later.
+  // scope, (even after the outer function has finished executing)/(even it's sites outside of that scope is called a Closure).
+  // - A closure is a function that remembers the variables from the scope where it was created, even if it's executed in a different scope later.
 
   var add2 = makeAdder(
     2,
