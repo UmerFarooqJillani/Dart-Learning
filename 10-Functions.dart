@@ -289,6 +289,21 @@ void main() async {
           - Real-time chat messages
           - WebSocket or Firebase data
         - Use Stream when handling continuous or repeated data, like live feeds or button taps.
+        
+    --> Difference between async and async*
+        -> async:  Asynchronous Function (returns a Future)
+           - A function marked with async executes asynchronously and always returns a Future<T>.
+           - It’s used when you want to return a single value in the future (not multiple values).
+           - Uses:
+             - Network calls (e.g., API fetch)
+             - File reading
+             - Database queries
+             - Single async result
+        -> async*: Asynchronous Generator (returns a Stream)
+           - A function marked with async* returns a Stream<T>, not a Future.
+           - It’s used when you want to yield (emit) multiple values over time asynchronously.
+           - Uses:
+             - Data streams, Live updates
     */
 
   // Future
