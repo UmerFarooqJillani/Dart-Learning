@@ -269,6 +269,8 @@ void main() async {
 
   //-------------------------
   /*
+    --> async/await
+         The `async` keyword designates a function as asynchronous, allowing non-blocking execution, while `await` pauses execution until an asynchronous operation completes.
     --> Real World Example: 
        Future ---> 	Ordering a pizza: you get it once after a delay
        Stream ---> 	Watching a YouTube Live: you receive data over time continuously
