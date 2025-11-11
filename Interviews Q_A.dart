@@ -106,7 +106,7 @@ void main() {
     | Stack                     | <- local variables, references
     +---------------------------+
   */
-  // ------------ (Abstract Class {Access data directly or indirectly) -------------------------------
+  // ------------ (Abstract Class {Access data directly or indirectly}) -------------------------------
   /*
   -> Explain Abstract Class and how to access its data directly or indirectly.
     - An abstract class cannot be instantiated directly.
@@ -130,5 +130,30 @@ void main() {
         }
     - Direct Access: ❌ Not possible (you can’t create an object).
     - ✅ Indirect Access: ✅ Possible through subclasses (inheritance or polymorphism).
+  */
+  // ------------ (Access non-static data like static data) -------------------------------
+  /*
+  -> How to access non-static data like static data?
+    Normally:
+      - Static data is accessed via class name (e.g., ClassName.data).
+      - Non-static data belongs to object instances (e.g., obj.data).
+    But you can simulate non-static access by:
+      - Creating a static reference to an instance, or
+      - Using a singleton pattern.
+      - e.g:
+          class Counter {
+            int count = 0;
+            static Counter instance = Counter(); // static instance
+
+            void increment() => count++;
+          }
+
+          void main() {
+            Counter.instance.increment(); // Access non-static data via static reference
+            print(Counter.instance.count); // Works like static data
+          }
+          
+    - You can’t truly access non-static members without an object, but you can indirectly do 
+      so through a static instance reference.
   */
 }
