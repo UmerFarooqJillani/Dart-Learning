@@ -244,4 +244,15 @@ void main() {
         - Both are instances of the Student class.
         - But they are different objects (stored in different memory locations).
   */
+  // ------------ (Difference b/w final and const) -------------------------------
+  /*
+  -> Difference between final and const
+    Final:
+      - A variable that can be set only once (runtime constant).
+      - Hold dynamic values
+    Const:
+      A variable that is compile-time constant (value must be known at compile time).
+      - No Hold dynamic values (must be known at compile time)
+
+  */
 }
