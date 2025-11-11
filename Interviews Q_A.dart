@@ -15,6 +15,8 @@ void main() {
           the copy shares those references (not duplicates them).
     Deep Copy:
         - A Deep Copy creates a fully independent clone, duplicating all nested objects too.
+        
+  Use deep copy when you want independent objects, shallow copy is faster but shares memory references.
   */
   Student s1 = Student('Ali', [85, 90]);
   Student shallow = s1; // Shallow copy (same reference)
