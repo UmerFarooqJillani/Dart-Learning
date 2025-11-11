@@ -152,8 +152,14 @@ void main() {
             Counter.instance.increment(); // Access non-static data via static reference
             print(Counter.instance.count); // Works like static data
           }
-          
+
     - You can’t truly access non-static members without an object, but you can indirectly do 
       so through a static instance reference.
+  */
+  // ------------ (Access Modifiers in Dart) -------------------------------
+  /*
+  -> Access Modifiers in Dart
+    - Dart doesn’t have public, protected, or private keywords like Java,
+      only _ (underscore) controls access.
   */
 }
