@@ -79,6 +79,8 @@ void main() {
         - s1 and s2 are references stored in stack memory.
         - The actual Student objects ("Ali", "Sara") are stored in the heap.
         - When s1 or s2 are no longer referenced, garbage collector deletes them from heap.
+      - When a class is loaded, its static data and methods are stored.
+      - When an object is created, instance fields are stored in heap.
 
   -> Stack vs Heap
     - Stores
@@ -96,5 +98,12 @@ void main() {
     - Managed by
       - Stack:  (Compiler)
       - Heap:   (Garbage Collector)
+    
+  -> Memory Layout:
+    +---------------------------+
+    | Method Area (Code)        | <- methods & static data
+    | Heap (Objects)            | <- object data (attributes)
+    | Stack                     | <- local variables, references
+    +---------------------------+
   */
 }
