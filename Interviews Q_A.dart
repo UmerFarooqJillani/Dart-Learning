@@ -106,4 +106,29 @@ void main() {
     | Stack                     | <- local variables, references
     +---------------------------+
   */
+  // ------------ (Abstract Class {Access data directly or indirectly) -------------------------------
+  /*
+  -> Explain Abstract Class and how to access its data directly or indirectly.
+    - An abstract class cannot be instantiated directly.
+    - It is meant to provide a base class for subclasses to inherit and implement abstract methods.
+    - e.g:
+        abstract class Animal {
+          void makeSound(); // abstract method
+          void sleep() => print("Sleeping..."); // concrete method
+        }
+
+        class Dog extends Animal {
+          @override
+          void makeSound() => print("Bark!");
+        }
+
+        void main() {
+          // Animal a = Animal(); ❌ can't instantiate abstract class
+          Dog d = Dog();
+          d.makeSound(); // indirect access
+          d.sleep();     // inherited method
+        }
+    - Direct Access: ❌ Not possible (you can’t create an object).
+    - ✅ Indirect Access: ✅ Possible through subclasses (inheritance or polymorphism).
+  */
 }
