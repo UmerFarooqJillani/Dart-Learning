@@ -162,4 +162,86 @@ void main() {
     - Dart doesn’t have public, protected, or private keywords like Java,
       only _ (underscore) controls access.
   */
+  // ------------ (Class, Object, and Instance {Relationship}) -------------------------------
+  /*
+  -> Class, Object, and Instance (The Relationship)
+    Class:
+      - A class is just a blueprint or template.
+      - It defines what data (attributes) and behavior (methods) an object will have, 
+        but it doesn’t occupy memory for real data until you create an object.
+      - e.g:
+          class Car {
+            String brand;
+            int speed;
+
+            void drive() => print("$brand is driving at $speed km/h");
+          }
+      - Here, Car is only a definition — it describes a car, but doesn’t exist in memory yet.
+
+    Object:
+      - An object is a real entity created from a class — it actually exists in memory.
+      - It holds its own copies of variables and can call methods.
+      - e.g:
+          void main() {
+            Car car1 = Car(); // car1 is an object
+            car1.brand = "Toyota";
+            car1.speed = 100;
+            car1.drive(); // Toyota is driving at 100 km/h
+          }
+      - car1 is an object of the class Car.
+      - It exists in heap memory, and you can access its attributes/methods.
+
+    Instance: 
+      - The term “instance” means a realized copy of a class.
+      - Every object is an instance of its class.
+      - In other words:
+        - All instances are objects, but the term “instance” emphasizes which class it belongs to.
+      - e.g:
+          Car car1 = Car();  // car1 is an instance of Car
+          Car car2 = Car();  // car2 is another instance
+      - Both car1 and car2 are objects, but they are different instances (stored at 
+        different memory locations).
+      - e.g:
+          class Student {
+            String name;
+            Student(this.name);
+          }
+
+          void main() {
+            Student s1 = Student("Ali");
+            Student s2 = Student("Ali");
+            Student s3 = s1;
+
+            print(s1 == s2); // ❌ false — different objects (different memory)
+            print(s1 == s3); // ✅ true — same reference
+          }
+    Instance vs Object:
+      Class:
+        Blueprint or template for creating objects
+      Object:
+        A real entity (in memory) created from a class
+      Instance:
+        A specific object that belongs to a class
+      e.g:
+        class Student {
+          String name;
+          Student(this.name);
+        }
+
+        void main() {
+          // Create two objects (instances)
+          Student s1 = Student('Ali');
+          Student s2 = Student('Sara');
+
+          print(s1); // Instance of 'Student'
+          print(s2); // Instance of 'Student'
+
+          // Check if they are the same object
+          print(s1 == s2); // false — different objects, different memory
+        }
+
+        - Both s1 and s2 are objects of Student.
+        - Both are instances of the Student class.
+        - But they are different objects (stored in different memory locations).
+  */
 }
