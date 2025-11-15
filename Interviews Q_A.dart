@@ -253,6 +253,5 @@ void main() {
     Const:
       A variable that is compile-time constant (value must be known at compile time).
       - No Hold dynamic values (must be known at compile time)
-
   */
 }
