@@ -109,8 +109,13 @@ void main() {
   // ------------ (Abstract Class {Access data directly or indirectly}) -------------------------------
   /*
   -> Explain Abstract Class and how to access its data directly or indirectly.
-    - An abstract class cannot be instantiated directly.
+    - An abstract class cannot be instantiated directly (you cannot create an object directly from that class using the `new` keyword).
     - It is meant to provide a base class for subclasses to inherit and implement abstract methods.
+    - The Conceptual Meaning
+      - Think of an abstract class as a concept rather than a concrete thing:
+          - Abstract: "Vehicle" is a concept. You cannot buy a generic "vehicle" from a dealership.
+          - Concrete: You buy a specific type of vehicle, like a "Car" or a "Motorcycle".
+      In programming, Vehicle would be the abstract class, and Car would be the concrete subclass.
     - e.g:
         abstract class Animal {
           void makeSound(); // abstract method
